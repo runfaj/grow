@@ -6,10 +6,8 @@
   "scripts": {
     "start": "node src/server/index.js",
     "start-dev": "nodemon src/server/index.js",
-
     "build": "webpack --mode production",
     "build-dev": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-
     "dev": "concurrently \"npm run start-dev\" \"npm run build-dev\"",
     "prod": "npm run build && npm run start"
   },
@@ -28,7 +26,8 @@
     "express": "^4.16.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
