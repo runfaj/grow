@@ -100,23 +100,6 @@ function getAllPersonNames(dataSet) {
     });
 }
 
-function handleApiResponse(res, next) {
-    return (err, response, body) => {
-        if (err || body[0] === '<') {
-            res.locals = {
-                success: false,
-                error: err || 'Invalid request. Please check your state variable.'
-            };
-            return next();
-        }
-        res.locals = {
-            success: true,
-            results: JSON.parse(body).results
-        };
-        return next();
-    };
-}
-
 function jsonResponse(req, res, next) {
     return res.json(res.locals);
 }

@@ -61,6 +61,7 @@ export default class App extends Component {
                     onSubmit={this.onSubmit.bind(this)}
                 />
 
+                {/* This might be worth putting into its own component, but negligable for this sample app */}
                 {this.state.results.length > 0 &&
                     <div className="results-area">
                         <div className="left-side">
