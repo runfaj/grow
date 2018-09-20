@@ -1,0 +1,80 @@
+@import '../global_theme.less';
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700.css');
+
+.App {
+    color: @primaryText;
+    font-family: Karla, sans-sans-serif;
+
+    .results-area {
+        margin-top: 40px;
+
+        & > * {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+        }
+    }
+
+    .results-details {
+        opacity: 0;
+        padding: 20px 40px;
+        background-color: @tertiaryNeutral;
+
+        &.visible {
+            opacity: 1;
+            background-color: @primaryNeutral;
+            transition: all 500ms ease;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        label {
+            font-size: 11px;
+            display: block;
+            margin-bottom: 4px;
+            margin-top: 20px;
+        }
+    }
+
+    .results-list {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: top;
+            padding: 6px 20px;
+        }
+
+        &-header {
+            display: table-row;
+
+            .table-cell {
+                background-color: @secondaryNeutral;
+                color: @secondaryText;
+            }
+        }
+
+        &-row {
+            display: table-row;
+            cursor: pointer;
+
+            &:hover {
+                .table-cell {
+                    background-color: fade(@secondaryColor, 15%);
+                }
+            }
+
+            &.selected {
+                .table-cell {
+                    background-color: @primaryColor;
+                    color: @secondaryText;
+                }
+            }
+        }
+    }
+}

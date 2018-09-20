@@ -1,0 +1,30 @@
+@import '../global_theme.less';
+
+.SearchForm {
+    select {
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 130px;
+        border: 1px solid @primaryColor;
+        border-radius: 3px;
+        padding: 4px 8px;
+        margin-right: 12px;
+    }
+
+    button {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 4px 20px;
+        border: 1px solid @secondaryColor;
+        border-radius: 3px;
+        background-color: @tertiaryNeutral;
+
+        &:hover {
+            background-color: fade(@secondaryColor, 15%);
+
+            &:active {
+                background-color: fade(@secondaryColor, 30%);
+            }
+        }
+    }
+}
